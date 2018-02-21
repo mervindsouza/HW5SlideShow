@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HW5SlideShow</string>
+    <string name="button_text">START SLIDESHOW</string>
 </resources>

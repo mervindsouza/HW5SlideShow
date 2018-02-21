@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="@dimen/activity_horizontal_margin"
     android:layout_marginLeft="@dimen/activity_vertical_margin"
     android:layout_marginRight="@dimen/activity_vertical_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorBgMainActivity"
-    tools:context="com.example.mdsouza5.hw5slideshow.MainActivity">
+    android:background="@color/colorBgMainActivity">
 
     <LinearLayout
-        android:id="@+id/linearlayoutMA"
+        android:id="@+id/linearlayoutSS"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/cityNameSS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text" />
+
+        <TextView
+            android:id="@+id/cityMsgSS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_text" />
+
         <ImageView
-            android:id="@+id/imageviewiitMA"
+            android:id="@+id/cityViewSS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_launcher_foreground" />
 
-        <SeekBar
-            android:id="@+id/seekbarTimerMA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/seekbarTimerValueMA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name" />
-
-        <Button
-            android:id="@+id/startSlideShowMA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button_text" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
