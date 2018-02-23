@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HW5SlideShow</string>
+    <string name="iit_logo_content_description">IIT School of Applied Technology</string>
     <string name="button_text">START SLIDESHOW</string>
 </resources>
