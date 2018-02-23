@@ -26,11 +26,14 @@ public class MainActivity extends AppCompatActivity {
         slideslideshowButton = (Button) findViewById(R.id.startSlideShowMABtn);
         timerSeekBar = (SeekBar) findViewById(R.id.seekbarTimerMA);
         timerTextView = (TextView) findViewById(R.id.seekbarTimerValueMA);
+        iitlogoImageView= (ImageView) findViewById(R.id.imageviewiitMA);
 
         //Set Values For Controls
         timerSeekBar.setMax(10);
         timerSeekBar.setProgress(timerSeekBar.getMax() / 2);
         timerTextView.setText(String.valueOf(timerSeekBar.getProgress()));
+        iitlogoImageView.setContentDescription("IIT School of Applied Technology");
+        iitlogoImageView.setImageDrawable(getDrawable(R.drawable.iit_sat_stack_186_blk));
 
         //SeekBar
         timerSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -47,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 timerTextView.setText(String.valueOf(timerSeekBar.getProgress()));
+                if(timerSeekBar.getProgress() ==  0){
+                    Toast.makeText(getApplicationContext(), String.format("Timer Value Cannot Be %d", timerSeekBar.getProgress()), Toast.LENGTH_LONG).show();
+                }
             }
         });
 
