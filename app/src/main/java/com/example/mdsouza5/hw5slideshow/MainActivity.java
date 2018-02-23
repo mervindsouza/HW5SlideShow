@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         slideslideshowButton = (Button) findViewById(R.id.startSlideShowMABtn);
         timerSeekBar = (SeekBar) findViewById(R.id.seekbarTimerMA);
         timerTextView = (TextView) findViewById(R.id.seekbarTimerValueMA);
-        iitlogoImageView= (ImageView) findViewById(R.id.imageviewiitMA);
+        iitlogoImageView = (ImageView) findViewById(R.id.imageviewiitMA);
 
         //Set Values For Controls
         timerSeekBar.setMax(10);
@@ -44,14 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 timerTextView.setText(String.valueOf(timerSeekBar.getProgress()));
-                if(timerSeekBar.getProgress() ==  0){
-                    Toast.makeText(getApplicationContext(), String.format("Timer Value Cannot Be %d", timerSeekBar.getProgress()), Toast.LENGTH_LONG).show();
+
+                //Make Toast if SeekBar Value == 0
+                if (timerSeekBar.getProgress() == 0) {
+                    Toast.makeText(getApplicationContext(), String.format("Timer Value Cannot Be %d", timerSeekBar.getProgress()), Toast.LENGTH_SHORT).show();
                 }
             }
         });
