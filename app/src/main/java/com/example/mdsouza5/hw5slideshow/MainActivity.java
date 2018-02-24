@@ -61,11 +61,24 @@ public class MainActivity extends AppCompatActivity {
         slideslideshowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Slide Show Started", Toast.LENGTH_SHORT).show();
-                //Get the Values
+                //Toast.makeText(getApplicationContext(), "Slide Show Started", Toast.LENGTH_SHORT).show();
 
+                //Get the Values
+                RetriveValueFromTimerSeekBar();
                 //Call intent and pass values to the next activity
             }
         });
+    }
+
+    //Get the Values and Perform Validations
+    private void RetriveValueFromTimerSeekBar() {
+        if (timerSeekBar.getProgress() == 0) {
+            Toast.makeText(getApplicationContext(), String.format("Timer Value Cannot Be %d", timerSeekBar.getProgress()), Toast.LENGTH_SHORT).show();
+            timerSeekBar.setProgress(timerSeekBar.getProgress() + 1);
+            timerTextView.setText(String.valueOf((timerSeekBar.getProgress())));
+            Toast.makeText(getApplicationContext(), String.format("Minimum Value Set to %d", timerSeekBar.getProgress()), Toast.LENGTH_LONG).show();
+        } else {
+            timerForSlideShow = Integer.valueOf(timerSeekBar.getProgress());
+        }
     }
 }
