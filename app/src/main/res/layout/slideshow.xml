@@ -12,19 +12,29 @@
         android:id="@+id/linearlayoutSS"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="fill_vertical"
+        >
 
         <TextView
             android:id="@+id/cityNameSS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_text" />
+            android:text="@string/button_text"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAllCaps="true"
+            />
 
         <TextView
             android:id="@+id/cityMsgSS"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_text" />
+            android:text="@string/button_text"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <ImageView
             android:id="@+id/cityViewSS"

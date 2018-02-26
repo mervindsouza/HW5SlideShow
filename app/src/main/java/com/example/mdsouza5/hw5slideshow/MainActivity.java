@@ -1,5 +1,6 @@
 package com.example.mdsouza5.hw5slideshow;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView timerTextView;
     private ImageView iitlogoImageView;
     private int timerForSlideShow;
+    private static final String timerValueIntentExtra = "TimerValue";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         timerTextView.setText(String.valueOf(timerSeekBar.getProgress()));
         iitlogoImageView.setContentDescription("IIT School of Applied Technology");
         iitlogoImageView.setImageDrawable(getDrawable(R.drawable.iit_sat_stack_186_blk));
+        //timerForSlideShow = 0;
 
         //SeekBar
         timerSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -65,7 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
                 //Get the Values
                 RetriveValueFromTimerSeekBar();
+
                 //Call intent and pass values to the next activity
+                Intent startSlideHSowIntent = new Intent(getApplicationContext(), StartSlideShow.class);
+                startSlideHSowIntent.putExtra(timerValueIntentExtra, timerForSlideShow);
+                startActivity(startSlideHSowIntent);
+                Toast.makeText(getApplicationContext(), "Slide Show Started", Toast.LENGTH_SHORT).show();
             }
         });
     }
