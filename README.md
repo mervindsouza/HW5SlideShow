@@ -4,17 +4,22 @@
 
 ##### Depending on Timer set, the slides will be shown at the specified intervals
 
-Default View: 
+__Default View:__
+
 ![Default View](/images/Screenshot_20180226-134304.png) 
 
-IF Seekbar Value Selected is 0: 
+__IF Seekbar Value Selected is 0:__
+
 ![Default View](/images/Screenshot_20180226-134317.png) 
 
-IF Seekbar Value Selected is 0 and Start Slideshow is clicked, Default value is set to 1: 
+__IF Seekbar Value Selected is 0 and Start Slideshow is clicked, Default value is set to 1:__
+
 ![Default View](/images/Screenshot_20180226-134328.png) 
 
-Vertical View: 
+__Vertical View:__
+
 ![Default View](/images/Screenshot_20180226-134338.png) 
 
-Horizontal View: 
+__Horizontal View:__
+
 ![Default View](/images/Screenshot_20180226-134357.png) 
