@@ -5,7 +5,7 @@
 ##### Depending on Timer set, the slides will be shown at the specified intervals
 
 Default View: 
-![Default View](https://1drv.ms/u/s!AuyFZo4gfhiNlkPRWqqCo_sgGLhD) 
+![Default View](/images/Screenshot_20180226-134304.png) 
 
 IF Seekbar Value Selected is 0: 
 ![Default View](https://1drv.ms/u/s!AuyFZo4gfhiNlkRdhvi8iMOwsLXG)
