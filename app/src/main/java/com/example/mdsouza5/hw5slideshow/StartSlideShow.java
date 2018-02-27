@@ -116,5 +116,7 @@ public class StartSlideShow extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        handlerForSlideShow.removeCallbacks(runnableInstance);
+        finish();
     }
 }
